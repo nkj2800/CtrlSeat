@@ -25,7 +25,7 @@ app.use(morgan('dev'))
 connectDatabase()
 
 // Mount API routes
-app.use('/api/v1/auth', AuthRoutes)
+app.use('/api/auth', AuthRoutes)
 
 
 app.use(errorMiddleware)
