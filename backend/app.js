@@ -8,6 +8,7 @@ import { connectDatabase } from './config/dbConnect.js'
 import errorMiddleware from './middlewares/error.js'
 
 import AuthRoutes from './routes/auth.js'
+import MovieRoutes from './routes/movie.js'
 
 // Handle Uncaught Exceptions
 process.on('uncaughtException', (err)=> {
@@ -30,6 +31,7 @@ connectDatabase()
 
 // Mount API routes
 app.use('/api/auth', AuthRoutes)
+app.use('/api/movies', MovieRoutes)
 
 
 app.use(errorMiddleware)
