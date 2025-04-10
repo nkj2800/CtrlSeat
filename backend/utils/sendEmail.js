@@ -20,4 +20,4 @@ const sendEmail = async (options) => {
   await transport.sendMail(message)
 }
 
-export default sendEmail
+export default sendEmail  

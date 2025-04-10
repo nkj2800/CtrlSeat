@@ -138,3 +138,56 @@ export const resetPassword = catchAsyncErrors(async (req, res, next) => {
 
   sendToken(user, 200, res)
 })
+
+
+
+// Get current User Profile:  GET  /api/auth/me
+export const getUserProfile = catchAsyncErrors(async (req, res, next) => {
+  const user = await User.findById(req?.user?._id)
+
+  res
+    .status(200)
+    .json({
+      user
+    })
+})
+
+// Update Password:  PUT  /api/auth/password/update
+export const updatePassword = catchAsyncErrors(async (req, res, next) => {
+  const user = await User.findById(req?.user?._id).select('+password')
+
+  // check if previous password is correct
+  const isPasswordMatched = await user.comparePassword(req.body.oldPassword)
+
+  if (!isPasswordMatched) {
+    return next(new ErrorHandler('Old password is incorrect', 400))
+  }
+
+  user.password = req.body.newPassword
+  user.save()
+
+  res
+    .status(200)
+    .json({
+      success: true
+    })
+})
+
+// Update User Profile:  PUT  /api/auth/me/update
+export const updateProfile = catchAsyncErrors(async (req, res, next) => {
+
+  const newUserData = {
+    name: req.body.name,
+    email: req.body.email
+  }
+
+  const user = await User.findByIdAndUpdate(req.user._id, newUserData, {
+    new: true
+  })
+
+  res
+    .status(200)
+    .json({
+      user
+    })
+})
