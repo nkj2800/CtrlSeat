@@ -5,6 +5,8 @@ import morgan from 'morgan'
 import { connectDatabase } from './config/dbConnect.js'
 import errorMiddleware from './middlewares/error.js'
 
+import AuthRoutes from './routes/auth.js'
+
 // Handle Uncaught Exceptions
 process.on('uncaughtException', (err)=> {
   console.log(`Error: ${err}`)
@@ -21,6 +23,9 @@ app.use(express.json())
 app.use(morgan('dev'))
 
 connectDatabase()
+
+// Mount API routes
+app.use('/api/v1/auth', AuthRoutes)
 
 
 app.use(errorMiddleware)
