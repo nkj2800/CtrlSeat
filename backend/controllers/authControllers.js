@@ -4,7 +4,7 @@ import sendToken from "../utils/sendToken.js";
 import ErrorHandler from "../utils/errorhandler.js";
 
 
-// Register a User: POST  /api/v1/register
+// Register a User: POST  /api/auth/register
 export const registerUser = catchAsyncErrors(async (req, res, next) => {
   const { name, email, password } = req.body
 
@@ -18,7 +18,7 @@ export const registerUser = catchAsyncErrors(async (req, res, next) => {
 })
 
 
-// Login User: POST  /api/v1/login
+// Login User: POST  /api/auth/login
 export const loginUser = catchAsyncErrors(async (req, res, next) => {
   const { email, password } = req.body
 
@@ -39,4 +39,19 @@ export const loginUser = catchAsyncErrors(async (req, res, next) => {
   }
 
   sendToken(user, 200, res)
+})
+
+
+// Logout User: GET  /api/auth/login
+export const logoutUser = catchAsyncErrors(async (req, res, next) => {
+  res.cookie('token', null, {
+    expires: new Date(Date.now()),
+    httpOnly: true
+  })
+
+  res
+    .status(200)
+    .json({
+      message: 'Logged Out'
+    })
 })

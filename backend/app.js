@@ -1,6 +1,8 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import morgan from 'morgan'
+import cookieParser from 'cookie-parser'
+
 
 import { connectDatabase } from './config/dbConnect.js'
 import errorMiddleware from './middlewares/error.js'
@@ -21,6 +23,8 @@ dotenv.config({ path: './backend/config/config.env' })
 
 app.use(express.json())
 app.use(morgan('dev'))
+app.use(cookieParser())
+
 
 connectDatabase()
 
