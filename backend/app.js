@@ -2,7 +2,9 @@ import express from 'express'
 import dotenv from 'dotenv'
 import morgan from 'morgan'
 import cookieParser from 'cookie-parser'
+import qs from 'qs'
 
+dotenv.config({ path: './backend/config/config.env' })
 
 import { connectDatabase } from './config/dbConnect.js'
 import errorMiddleware from './middlewares/error.js'
@@ -11,6 +13,7 @@ import AuthRoutes from './routes/auth.js'
 import MovieRoutes from './routes/movie.js'
 import ShowRoutes from './routes/show.js'
 import BookingRoutes from './routes/booking.js'
+import PaymentRoutes from './routes/payment.js'
 
 // Handle Uncaught Exceptions
 process.on('uncaughtException', (err)=> {
@@ -22,7 +25,7 @@ process.on('uncaughtException', (err)=> {
 
 const app = express()
 
-dotenv.config({ path: './backend/config/config.env' })
+app.set('query parser', str => qs.parse(str))
 
 app.use(express.json())
 app.use(morgan('dev'))
@@ -36,6 +39,7 @@ app.use('/api/auth', AuthRoutes)
 app.use('/api/movies', MovieRoutes)
 app.use('/api/shows', ShowRoutes)
 app.use('/api/bookings', BookingRoutes)
+app.use('/api/payments', PaymentRoutes)
 
 
 app.use(errorMiddleware)

@@ -35,7 +35,7 @@ const bookingSchema = new mongoose.Schema({
     default: 'pending'
   },
   paymentIntentId: {
-    type: String // for Stripe integration
+    type: String 
   },
   isCancelled: {
     type: Boolean,

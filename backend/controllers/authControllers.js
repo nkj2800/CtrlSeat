@@ -1,7 +1,7 @@
 import catchAsyncErrors from "../middlewares/catchAsyncErrors.js";
 import User from "../models/user.js";
 import sendToken from "../utils/sendToken.js";
-import ErrorHandler from "../utils/errorhandler.js";
+import ErrorHandler from "../utils/errorHandler.js";
 import crypto from 'crypto'
 import sendEmail from "../utils/sendEmail.js";
 import { getResetPasswordTemplate } from "../utils/emailTemplates.js";
