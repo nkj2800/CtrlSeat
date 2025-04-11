@@ -31,7 +31,7 @@ export const getMovieDetails = catchAsyncErrors(async (req, res, next) => {
 })
 
 
-// Create a Movie - ADMIN:  POST  /api/movies/admin/create
+// Create a Movie - ADMIN:  POST  /api/movies
 export const createMovie = catchAsyncErrors(async (req, res, next) => {
   const movie = await Movie.create(req.body)
 
