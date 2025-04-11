@@ -102,3 +102,45 @@ export const cancelBooking = catchAsyncErrors(async (req, res, next) => {
     .status(200)
     .json({ message: 'Booking cancelled successfully' })
 })
+
+
+// Get all Bookings - ADMIN:  GET  /api/bookings/admin
+export const getAllBookings = catchAsyncErrors(async (req, res, next) => {
+  const bookings = await Booking.find()
+    .populate('user', 'name email')
+    .populate({
+      path: 'show',
+      select: 'screen startTime',
+      populate: {
+        path: 'movie',
+        select: 'title'
+      }
+    })
+    .sort({ createdAt: -1 })
+
+  res
+    .status(200)
+    .json({ bookings })
+})
+
+// Get Booking Details - ADMIN:  GET  /api/bookings/admin/:id
+export const getBookingById = catchAsyncErrors(async (req, res, next) => {
+  const booking = await Booking.findById(req.params.id)
+    .populate('user', 'name email')
+    .populate({
+      path: 'show',
+      select: 'screen startTime',
+      populate: {
+        path: 'movie',
+        select: 'title'
+      }
+    })
+
+  if (!booking) {
+    return next(new ErrorHandler('Booking not found', 404))
+  }
+
+  res
+    .status(200)
+    .json({ booking })
+})
