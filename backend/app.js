@@ -10,6 +10,7 @@ import errorMiddleware from './middlewares/error.js'
 import AuthRoutes from './routes/auth.js'
 import MovieRoutes from './routes/movie.js'
 import ShowRoutes from './routes/show.js'
+import BookingRoutes from './routes/booking.js'
 
 // Handle Uncaught Exceptions
 process.on('uncaughtException', (err)=> {
@@ -34,6 +35,7 @@ connectDatabase()
 app.use('/api/auth', AuthRoutes)
 app.use('/api/movies', MovieRoutes)
 app.use('/api/shows', ShowRoutes)
+app.use('/api/bookings', BookingRoutes)
 
 
 app.use(errorMiddleware)
