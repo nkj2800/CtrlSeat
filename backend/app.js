@@ -15,6 +15,7 @@ import ShowRoutes from './routes/show.js'
 import BookingRoutes from './routes/booking.js'
 import PaymentRoutes from './routes/payment.js'
 
+
 // Handle Uncaught Exceptions
 process.on('uncaughtException', (err)=> {
   console.log(`Error: ${err}`)
