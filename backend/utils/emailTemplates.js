@@ -48,7 +48,7 @@ export const getResetPasswordTemplate = (username, resetUrl) => `
 `
 
 
-export const getBookingConfirmationTemplate = ({ name, bookingId, movieTitle, screen, showtime, numberOfSeats, totalPrice }) => `
+export const getBookingConfirmationTemplate = ({ name, bookingId, movieTitle, screen, showtime, numberOfSeats, totalPrice, seats }) => `
 <!DOCTYPE html>
 <html>
   <head>
@@ -59,31 +59,68 @@ export const getBookingConfirmationTemplate = ({ name, bookingId, movieTitle, sc
     <table width="100%" style="padding: 40px 0;">
       <tr>
         <td align="center">
-          <table width="600" style="background-color: #ffffff; padding: 30px; border-radius: 6px;">
+          <table width="600" style="background-color: #ffffff; padding: 30px; border-radius: 6px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
             <tr>
-              <td align="center" style="font-size: 22px; font-weight: bold; color: #333;">
+              <td align="center" style="font-size: 24px; font-weight: bold; color: #333; padding-bottom: 20px; border-bottom: 1px solid #eee;">
                 🎟️ CtrlSeat - Booking Confirmation
               </td>
             </tr>
             <tr>
-              <td style="padding: 20px 0; font-size: 16px; color: #444;">
+              <td style="padding: 30px 0; font-size: 16px; color: #444; line-height: 1.5;">
                 <p>Hi ${name},</p>
                 <p>Your booking has been successfully confirmed. Here are your ticket details:</p>
-                <ul style="list-style: none; padding-left: 0; line-height: 1.8;">
-                  <li><strong>Booking ID:</strong> ${bookingId}</li>
-                  <li><strong>Movie:</strong> ${movieTitle}</li>
-                  <li><strong>Screen:</strong> ${screen}</li>
-                  <li><strong>Showtime:</strong> ${new Date(showtime).toLocaleString()}</li>
-                  <li><strong>Seats:</strong> ${numberOfSeats}</li>
-                  <li><strong>Total Paid:</strong> ₹${totalPrice}</li>
-                </ul>
+                
+                <table width="100%" style="background-color: #f9f9f9; border-radius: 4px; padding: 15px; margin: 20px 0;">
+                  <tr>
+                    <td style="padding: 8px 0;"><strong>Booking ID:</strong></td>
+                    <td>${bookingId}</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 8px 0;"><strong>Movie:</strong></td>
+                    <td>${movieTitle}</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 8px 0;"><strong>Screen:</strong></td>
+                    <td>${screen}</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 8px 0;"><strong>Showtime:</strong></td>
+                    <td>${new Date(showtime).toLocaleString('en-US', { 
+                      weekday: 'long',
+                      year: 'numeric', 
+                      month: 'long', 
+                      day: 'numeric',
+                      hour: '2-digit',
+                      minute: '2-digit'
+                    })}</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 8px 0;"><strong>Number of Seats:</strong></td>
+                    <td>${numberOfSeats}</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 8px 0;"><strong>Total Paid:</strong></td>
+                    <td>₹${totalPrice.toLocaleString('en-IN')}</td>
+                  </tr>
+                </table>
+                
+                <p>Please arrive at least 15 minutes before the showtime. Show this email or your booking ID at the counter to collect your tickets.</p>
                 <p>Enjoy your movie experience! 🍿</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding-top: 20px; border-top: 1px solid #eee; font-size: 14px; color: #777; text-align: center;">
                 <p>— The CtrlSeat Team</p>
+                <p style="margin-top: 15px;">
+                  <a href="https://ctrlseat.com/contact" style="color: #3498db; text-decoration: none;">Contact Support</a> | 
+                  <a href="https://ctrlseat.com/faq" style="color: #3498db; text-decoration: none;">FAQs</a>
+                </p>
               </td>
             </tr>
           </table>
           <p style="color: #999; font-size: 12px; margin-top: 20px;">
-            CtrlSeat • 123 Movie Lane • Film City
+            CtrlSeat • 123 Movie Lane • Film City<br>
+            This is an automated email. Please do not reply.
           </p>
         </td>
       </tr>

@@ -105,7 +105,7 @@ export const forgotPassword = catchAsyncErrors(async (req, res, next) => {
 
     await user.save()
 
-    return next(error?.message, 500)
+    return next(new ErrorHandler(error?.message, 500))
   }
 })
 

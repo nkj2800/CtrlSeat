@@ -15,6 +15,20 @@ CtrlSeat is a Node.js and Express-based backend API designed for seamless movie 
 
 ---
 
+## 📧 Email Templates
+
+### Password Reset Email
+![Password Reset Email](screenshots/forgot-password-email.png)
+
+*Email template sent to users when they request on forgot password.*
+
+### Booking Confirmation Receipt
+![Booking Confirmation Receipt](screenshots/booking-receipt-email.png)
+
+*Email receipt sent to users after successful movie ticket booking.*
+
+---
+
 ## 🛠️ Tech Stack
 
 - **Backend**: Node.js, Express.js

@@ -3,6 +3,10 @@ import dotenv from 'dotenv'
 import morgan from 'morgan'
 import cookieParser from 'cookie-parser'
 import qs from 'qs'
+import { rateLimit } from 'express-rate-limit'
+import helmet from 'helmet'
+import { xss } from 'express-xss-sanitizer'
+import hpp from 'hpp'
 
 dotenv.config({ path: './backend/config/config.env' })
 
@@ -14,10 +18,11 @@ import MovieRoutes from './routes/movie.js'
 import ShowRoutes from './routes/show.js'
 import BookingRoutes from './routes/booking.js'
 import PaymentRoutes from './routes/payment.js'
+import ErrorHandler from './utils/errorHandler.js'
 
 
 // Handle Uncaught Exceptions
-process.on('uncaughtException', (err)=> {
+process.on('uncaughtException', (err) => {
   console.log(`Error: ${err}`)
   console.log('Shutting down due to Uncaught Exception')
 
@@ -26,12 +31,23 @@ process.on('uncaughtException', (err)=> {
 
 const app = express()
 
+app.use(morgan('dev')) // Logging
+
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // Limit each IP to 100 requests per windowMs
+  message: 'Too many requests from this IP, please try again later'
+})
+
+app.use('/api', limiter)
+app.use(helmet()) // Security headers
+
 app.set('query parser', str => qs.parse(str))
 
 app.use(express.json())
-app.use(morgan('dev'))
+app.use(xss()) // Sanitize data
+app.use(hpp()) // Prevent HTTP Parameter Pollution
 app.use(cookieParser())
-
 
 connectDatabase()
 
@@ -42,6 +58,10 @@ app.use('/api/shows', ShowRoutes)
 app.use('/api/bookings', BookingRoutes)
 app.use('/api/payments', PaymentRoutes)
 
+// Handle default route
+app.use((req, res, next) => {
+  return next(new ErrorHandler(`Route not found: ${req.originalUrl}`, 404))
+})
 
 app.use(errorMiddleware)
 

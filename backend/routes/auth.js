@@ -1,11 +1,12 @@
 import express from 'express'
 import { allUsers, deleteUser, forgotPassword, getUserDetails, getUserProfile, loginUser, logoutUser, registerUser, resetPassword, updatePassword, updateProfile, updateUser } from '../controllers/authControllers.js'
 import { authoriseRoles, isAuthenticatedUser } from '../middlewares/auth.js'
+import { validateRegistration, validateLogin } from '../middlewares/validator.js'
 
 const router = express.Router()
 
-router.route('/register').post(registerUser)
-router.route('/login').post(loginUser)
+router.route('/register').post(validateRegistration, registerUser)
+router.route('/login').post(validateLogin, loginUser)
 router.route('/logout').get(logoutUser)
 
 router.route('/password/forgot').post(forgotPassword)

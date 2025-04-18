@@ -10,8 +10,6 @@ export const connectDatabase = () => {
   if (process.env.NODE_ENV === 'DEVELOPMENT') DB_URI = process.env.DB_LOCAL_URI
   if (process.env.NODE_ENV === 'PRODUCTION') DB_URI = process.env.DB_URI
 
-  console.log(DB_URI)
-
   if (!DB_URI) {
     console.error('MongoDB connection string is undefined. Please check your environment variables.');
     process.exit(1);
