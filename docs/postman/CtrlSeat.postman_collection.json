@@ -1,0 +1,4262 @@
+{
+	"info": {
+		"_postman_id": "d13a90ff-3d49-44c3-8636-fe16a1b08cc0",
+		"name": "CtrlSeat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30023998"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"noel k\",\r\n    \"email\": \"nk@gmail.com\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DOMAIN}}/api/auth/register",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"noel k\",\r\n    \"email\": \"nk@gmail.com\",\r\n    \"password\": \"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/auth/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "98"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Apr 2025 12:10:54 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745065547"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDM5MmNlZjkyNWZiYWU0ZWVhYTg1NiIsImlhdCI6MTc0NTA2NDY1NCwiZXhwIjoxNzQ1NjY5NDU0fQ.KklLR5fpwOzcZ_aatX_bSFtsAltOftzdLK9ueWzcXCA; Path=/; Expires=Sat, 26 Apr 2025 12:10:54 GMT; HttpOnly"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "183"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b7-J63KJZMukiwSTkwGN0h34lme2Uw\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDM5MmNlZjkyNWZiYWU0ZWVhYTg1NiIsImlhdCI6MTc0NTA2NDY1NCwiZXhwIjoxNzQ1NjY5NDU0fQ.KklLR5fpwOzcZ_aatX_bSFtsAltOftzdLK9ueWzcXCA\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"nkj000@gmail.com\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DOMAIN}}/api/auth/login",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"nkj000@gmail.com\",\r\n    \"password\": \"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Apr 2025 13:26:27 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745070088"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDEwYmFiYThhYjRlODcwNjdhZWYwMCIsImlhdCI6MTc0NTA2OTE4NywiZXhwIjoxNzQ1NjczOTg3fQ.tBttrgkaBdEZYvdHHu7NkZN2lXXIVNu020-gGZNVfyc; Path=/; Expires=Sat, 26 Apr 2025 13:26:27 GMT; HttpOnly"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "183"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b7-WMK5Bz1qZt8a84L/NLIcWNcl3yw\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDEwYmFiYThhYjRlODcwNjdhZWYwMCIsImlhdCI6MTc0NTA2OTE4NywiZXhwIjoxNzQ1NjczOTg3fQ.tBttrgkaBdEZYvdHHu7NkZN2lXXIVNu020-gGZNVfyc\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{DOMAIN}}/api/auth/logout",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Logout User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/auth/logout",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"auth",
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "98"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Apr 2025 13:27:13 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745070088"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "token=j%3Anull; Path=/; Expires=Sat, 19 Apr 2025 13:27:13 GMT; HttpOnly"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "24"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"18-VrxcAGTgNmbfbZgeQZbpWWtrp5A\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Logged Out\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Forgot Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"nkj2000@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DOMAIN}}/api/auth/password/forgot",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"password",
+								"forgot"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Forgot Password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"nkj2000@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/auth/password/forgot",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"auth",
+										"password",
+										"forgot"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "97"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Apr 2025 13:28:35 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745070088"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "45"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2d-nDfYo0cD1Iz7OTUmBIlfkbRcKhQ\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Email sent to nkj2000@gmail.com\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\":\"password\",\r\n    \"confirmPassword\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/password/reset/4532b0667a8321446bbe0b3d010300f9d917f388",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"password",
+								"reset",
+								"4532b0667a8321446bbe0b3d010300f9d917f388"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Reset Password",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"password\":\"password\",\r\n    \"confirmPassword\": \"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/auth/password/reset/4532b0667a8321446bbe0b3d010300f9d917f388",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"auth",
+										"password",
+										"reset",
+										"4532b0667a8321446bbe0b3d010300f9d917f388"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "92"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Apr 2025 13:30:53 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745070088"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZjdhMWFhNDZiZTIwNjk5ZjliOTM4YiIsImlhdCI6MTc0NTA2OTQ1MywiZXhwIjoxNzQ1Njc0MjUzfQ.v9JcxoR-qG_NUFj754-G8xTGw0D63rPxaGV9Znb-pFA; Path=/; Expires=Sat, 26 Apr 2025 13:30:53 GMT; HttpOnly"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "183"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b7-H6KyIGbKrDmSWS2nP2VOxlK4wuQ\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZjdhMWFhNDZiZTIwNjk5ZjliOTM4YiIsImlhdCI6MTc0NTA2OTQ1MywiZXhwIjoxNzQ1Njc0MjUzfQ.v9JcxoR-qG_NUFj754-G8xTGw0D63rPxaGV9Znb-pFA\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get User Profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{DOMAIN}}/api/auth/me",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"me"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get User Profile",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/auth/me",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"auth",
+										"me"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "91"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Apr 2025 13:34:17 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745070088"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "204"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"cc-tOa90Uc08OIgSX/5/FWAPhtcMF4\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"_id\": \"67f7a1aa46be20699f9b938b\",\n        \"name\": \"noel\",\n        \"email\": \"nkj2000@gmail.com\",\n        \"role\": \"admin\",\n        \"isDeleted\": false,\n        \"createdAt\": \"2025-04-10T10:47:06.515Z\",\n        \"updatedAt\": \"2025-04-19T13:30:53.353Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Profile",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"nkj2000@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DOMAIN}}/api/auth/me/update",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"me",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Profile",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"nkj2000@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/auth/me/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"auth",
+										"me",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "90"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Apr 2025 13:34:30 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745070088"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "204"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"cc-/JOFRJZkxXd/jtG91FoaAZ35zfA\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"_id\": \"67f7a1aa46be20699f9b938b\",\n        \"name\": \"noel\",\n        \"email\": \"nkj2000@gmail.com\",\n        \"role\": \"admin\",\n        \"isDeleted\": false,\n        \"createdAt\": \"2025-04-10T10:47:06.515Z\",\n        \"updatedAt\": \"2025-04-19T13:34:30.967Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Password",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPassword\": \"password\",\r\n    \"newPassword\": \"password1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DOMAIN}}/api/auth/password/update",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"password",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Password",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"oldPassword\": \"password\",\r\n    \"newPassword\": \"password1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/auth/password/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"auth",
+										"password",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "88"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Apr 2025 13:36:24 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745070088"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "16"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Users - ADMIN",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{DOMAIN}}/api/auth/admin/users",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"admin",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Users - ADMIN",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/auth/admin/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"auth",
+										"admin",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "87"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Apr 2025 13:36:46 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745070088"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1326"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"52e-yN27+pf46zz9NFgghW55IvBcC68\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"users\": [\n        {\n            \"_id\": \"67f7a1aa46be20699f9b938b\",\n            \"name\": \"noel\",\n            \"email\": \"nkj2000@gmail.com\",\n            \"role\": \"admin\",\n            \"isDeleted\": false,\n            \"createdAt\": \"2025-04-10T10:47:06.515Z\",\n            \"updatedAt\": \"2025-04-19T13:36:24.776Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"67f7fa3a47076bb5f809ca8a\",\n            \"name\": \"noel\",\n            \"email\": \"nkj2800@gmail.com\",\n            \"role\": \"user\",\n            \"isDeleted\": false,\n            \"createdAt\": \"2025-04-10T17:04:58.113Z\",\n            \"updatedAt\": \"2025-04-10T17:04:58.113Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"67f7fa5447076bb5f809ca8c\",\n            \"name\": \"noel test 1\",\n            \"email\": \"nkj0000@gmail.com\",\n            \"role\": \"admin\",\n            \"isDeleted\": true,\n            \"createdAt\": \"2025-04-10T17:05:24.516Z\",\n            \"updatedAt\": \"2025-04-10T17:10:40.612Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"68010baba8ab4e87067aef00\",\n            \"name\": \"noe\",\n            \"email\": \"nkj000@gmail.com\",\n            \"role\": \"user\",\n            \"isDeleted\": false,\n            \"createdAt\": \"2025-04-17T14:09:47.917Z\",\n            \"updatedAt\": \"2025-04-18T04:22:54.968Z\",\n            \"__v\": 0,\n            \"resetPasswordToken\": \"ac76b03ffef31506d4965595f4924b280b103f570e9def8f3b3c215724f9de52\",\n            \"resetPasswordTokenExpire\": \"2025-04-18T04:52:54.967Z\"\n        },\n        {\n            \"_id\": \"68028006f925fbae4eeaa803\",\n            \"name\": \"noel k j\",\n            \"email\": \"nkj@gmail.com\",\n            \"role\": \"user\",\n            \"isDeleted\": false,\n            \"createdAt\": \"2025-04-18T16:38:30.174Z\",\n            \"updatedAt\": \"2025-04-18T16:38:30.174Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"680392cef925fbae4eeaa856\",\n            \"name\": \"noel k\",\n            \"email\": \"nk@gmail.com\",\n            \"role\": \"user\",\n            \"isDeleted\": false,\n            \"createdAt\": \"2025-04-19T12:10:54.568Z\",\n            \"updatedAt\": \"2025-04-19T12:10:54.568Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get User Details - ADMIN",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{DOMAIN}}/api/auth/admin/users/67f7fa3a47076bb5f809ca8a",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"admin",
+								"users",
+								"67f7fa3a47076bb5f809ca8a"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get User Details - ADMIN",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/auth/admin/users/67f7fa3a47076bb5f809ca8a",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"auth",
+										"admin",
+										"users",
+										"67f7fa3a47076bb5f809ca8a"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "86"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Apr 2025 13:37:13 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745070088"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "203"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"cb-rtdPrxZJNCh9cHr6n5Q8WzqKYeI\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"_id\": \"67f7fa3a47076bb5f809ca8a\",\n        \"name\": \"noel\",\n        \"email\": \"nkj2800@gmail.com\",\n        \"role\": \"user\",\n        \"isDeleted\": false,\n        \"createdAt\": \"2025-04-10T17:04:58.113Z\",\n        \"updatedAt\": \"2025-04-10T17:04:58.113Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update User Details - ADMIN",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"noel test 1\",\r\n    \"role\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DOMAIN}}/api/auth/admin/users/67f7fa5447076bb5f809ca8c",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"admin",
+								"users",
+								"67f7fa5447076bb5f809ca8c"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update User Details - ADMIN",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"noel test 1\",\r\n    \"role\": \"admin\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{DOMAIN}}/api/auth/admin/users/67f7fa5447076bb5f809ca8c",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"admin",
+										"users",
+										"67f7fa5447076bb5f809ca8c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "85"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Apr 2025 13:37:34 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745070088"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "210"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d2-CevY79cAxD+iXSktXZwPFZgnses\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"_id\": \"67f7fa5447076bb5f809ca8c\",\n        \"name\": \"noel test 1\",\n        \"email\": \"nkj0000@gmail.com\",\n        \"role\": \"admin\",\n        \"isDeleted\": true,\n        \"createdAt\": \"2025-04-10T17:05:24.516Z\",\n        \"updatedAt\": \"2025-04-19T13:37:34.683Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete User - ADMIN",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{DOMAIN}}/api/auth/admin/users/67f7fa5447076bb5f809ca8c",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"admin",
+								"users",
+								"67f7fa5447076bb5f809ca8c"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete User - ADMIN",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{DOMAIN}}/api/auth/admin/users/67f7fa5447076bb5f809ca8c",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"admin",
+										"users",
+										"67f7fa5447076bb5f809ca8c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "84"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Apr 2025 13:37:47 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745070088"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "16"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Movie",
+			"item": [
+				{
+					"name": "Get Movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{DOMAIN}}/api/movies",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"movies"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "oppen",
+									"disabled": true
+								},
+								{
+									"key": "language",
+									"value": "english",
+									"disabled": true
+								},
+								{
+									"key": "ratings[gte]",
+									"value": "4",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Movies",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{DOMAIN}}/api/movies",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"path": [
+										"api",
+										"movies"
+									],
+									"query": [
+										{
+											"key": "keyword",
+											"value": "oppen",
+											"disabled": true
+										},
+										{
+											"key": "language",
+											"value": "english",
+											"disabled": true
+										},
+										{
+											"key": "ratings[gte]",
+											"value": "4",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "2",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Apr 2025 13:53:13 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745071694"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4000"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fa0-Dm2tphcUHtx/s+cLuiv5b7zHRng\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"resPerPage\": 10,\n    \"filteredMoviesCount\": 10,\n    \"movies\": [\n        {\n            \"_id\": \"67f822078c928ca0fa68777c\",\n            \"title\": \"Oppenheimer\",\n            \"description\": \"The story of J. Robert Oppenheimer and the creation of the atomic bomb during World War II.\",\n            \"genre\": [\n                \"Biography\",\n                \"Drama\",\n                \"History\"\n            ],\n            \"language\": \"English\",\n            \"duration\": 180,\n            \"releaseDate\": \"2023-07-21T00:00:00.000Z\",\n            \"isActive\": true,\n            \"ratings\": 4.7,\n            \"__v\": 0,\n            \"createdAt\": \"2025-04-10T19:54:47.522Z\",\n            \"updatedAt\": \"2025-04-10T19:54:47.522Z\"\n        },\n        {\n            \"_id\": \"67f822078c928ca0fa68777d\",\n            \"title\": \"Barbie\",\n            \"description\": \"Barbie suffers a crisis that leads her to question her world and her existence.\",\n            \"genre\": [\n                \"Comedy\",\n                \"Adventure\",\n                \"Fantasy\"\n            ],\n            \"language\": \"English\",\n            \"duration\": 114,\n            \"releaseDate\": \"2023-07-21T00:00:00.000Z\",\n            \"isActive\": true,\n            \"ratings\": 4,\n            \"__v\": 0,\n            \"createdAt\": \"2025-04-10T19:54:47.523Z\",\n            \"updatedAt\": \"2025-04-10T19:54:47.523Z\"\n        },\n        {\n            \"_id\": \"67f822078c928ca0fa68777e\",\n            \"title\": \"Jawan\",\n            \"description\": \"A man is driven by a personal vendetta to rectify the wrongs in society, while keeping his true identity hidden.\",\n            \"genre\": [\n                \"Action\",\n                \"Thriller\"\n            ],\n            \"language\": \"Hindi\",\n            \"duration\": 169,\n            \"releaseDate\": \"2023-09-07T00:00:00.000Z\",\n            \"isActive\": true,\n            \"ratings\": 4.2,\n            \"__v\": 0,\n            \"createdAt\": \"2025-04-10T19:54:47.524Z\",\n            \"updatedAt\": \"2025-04-10T19:54:47.524Z\"\n        },\n        {\n            \"_id\": \"67f822078c928ca0fa68777f\",\n            \"title\": \"Leo\",\n            \"description\": \"A mild-mannered café owner becomes the target of a gang, but he's not who he seems to be.\",\n            \"genre\": [\n                \"Action\",\n                \"Thriller\"\n            ],\n            \"language\": \"Tamil\",\n            \"duration\": 164,\n            \"releaseDate\": \"2023-10-19T00:00:00.000Z\",\n            \"isActive\": true,\n            \"ratings\": 4.1,\n            \"__v\": 0,\n            \"createdAt\": \"2025-04-10T19:54:47.524Z\",\n            \"updatedAt\": \"2025-04-10T19:54:47.524Z\"\n        },\n        {\n            \"_id\": \"67f822078c928ca0fa687780\",\n            \"title\": \"Pathaan\",\n            \"description\": \"An Indian spy battles a powerful mercenary group threatening national security.\",\n            \"genre\": [\n                \"Action\",\n                \"Thriller\"\n            ],\n            \"language\": \"Hindi\",\n            \"duration\": 146,\n            \"releaseDate\": \"2023-01-25T00:00:00.000Z\",\n            \"isActive\": true,\n            \"ratings\": 4,\n            \"__v\": 0,\n            \"createdAt\": \"2025-04-10T19:54:47.524Z\",\n            \"updatedAt\": \"2025-04-10T19:54:47.524Z\"\n        },\n        {\n            \"_id\": \"67f822078c928ca0fa687781\",\n            \"title\": \"Dune: Part Two\",\n            \"description\": \"Paul Atreides unites with the Fremen and sets out to exact revenge against the conspirators who destroyed his family.\",\n            \"genre\": [\n                \"Sci-Fi\",\n                \"Adventure\",\n                \"Drama\"\n            ],\n            \"language\": \"English\",\n            \"duration\": 166,\n            \"releaseDate\": \"2024-03-01T00:00:00.000Z\",\n            \"isActive\": true,\n            \"ratings\": 4.6,\n            \"__v\": 0,\n            \"createdAt\": \"2025-04-10T19:54:47.524Z\",\n            \"updatedAt\": \"2025-04-10T19:54:47.524Z\"\n        },\n        {\n            \"_id\": \"67f822078c928ca0fa687782\",\n            \"title\": \"Animal\",\n            \"description\": \"A violent man’s complicated relationship with his father shapes the course of his life.\",\n            \"genre\": [\n                \"Action\",\n                \"Drama\"\n            ],\n            \"language\": \"Hindi\",\n            \"duration\": 201,\n            \"releaseDate\": \"2023-12-01T00:00:00.000Z\",\n            \"isActive\": true,\n            \"ratings\": 4.3,\n            \"__v\": 0,\n            \"createdAt\": \"2025-04-10T19:54:47.524Z\",\n            \"updatedAt\": \"2025-04-10T19:54:47.524Z\"\n        },\n        {\n            \"_id\": \"67f822078c928ca0fa687783\",\n            \"title\": \"The Marvels\",\n            \"description\": \"Carol Danvers, Kamala Khan, and Monica Rambeau must team up to save the universe.\",\n            \"genre\": [\n                \"Action\",\n                \"Adventure\",\n                \"Sci-Fi\"\n            ],\n            \"language\": \"English\",\n            \"duration\": 105,\n            \"releaseDate\": \"2023-11-10T00:00:00.000Z\",\n            \"isActive\": true,\n            \"ratings\": 3.8,\n            \"__v\": 0,\n            \"createdAt\": \"2025-04-10T19:54:47.524Z\",\n            \"updatedAt\": \"2025-04-10T19:54:47.524Z\"\n        },\n        {\n            \"_id\": \"67f822078c928ca0fa687784\",\n            \"title\": \"John Wick: Chapter 4\",\n            \"description\": \"John Wick uncovers a path to defeating the High Table, but must face off against a new enemy with global alliances.\",\n            \"genre\": [\n                \"Action\",\n                \"Crime\",\n                \"Thriller\"\n            ],\n            \"language\": \"English\",\n            \"duration\": 169,\n            \"releaseDate\": \"2023-03-24T00:00:00.000Z\",\n            \"isActive\": true,\n            \"ratings\": 4.5,\n            \"__v\": 0,\n            \"createdAt\": \"2025-04-10T19:54:47.524Z\",\n            \"updatedAt\": \"2025-04-10T19:54:47.524Z\"\n        },\n        {\n            \"_id\": \"67f822078c928ca0fa687785\",\n            \"title\": \"Sita Ramam\",\n            \"description\": \"A soldier in the Indian army gets a letter from a woman who claims to be his wife — and sets out to find her.\",\n            \"genre\": [\n                \"Romance\",\n                \"Drama\"\n            ],\n            \"language\": \"Telugu\",\n            \"duration\": 163,\n            \"releaseDate\": \"2022-08-05T00:00:00.000Z\",\n            \"isActive\": true,\n            \"ratings\": 4.4,\n            \"__v\": 0,\n            \"createdAt\": \"2025-04-10T19:54:47.524Z\",\n            \"updatedAt\": \"2025-04-10T19:54:47.524Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Movie - ADMIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"title\": \"Oppenheimer TEST 1\",\r\n            \"description\": \"The story of J. Robert Oppenheimer and the creation of the atomic bomb during World War II.\",\r\n            \"genre\": [\r\n                \"Biography\",\r\n                \"Drama\",\r\n                \"History\"\r\n            ],\r\n            \"language\": \"English\",\r\n            \"duration\": 180,\r\n            \"releaseDate\": \"2023-07-21T00:00:00.000Z\",\r\n            \"ratings\": 4.7\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DOMAIN}}/api/movies",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"movies"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Movie - ADMIN",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"title\": \"Oppenheimer TEST 1\",\r\n            \"description\": \"The story of J. Robert Oppenheimer and the creation of the atomic bomb during World War II.\",\r\n            \"genre\": [\r\n                \"Biography\",\r\n                \"Drama\",\r\n                \"History\"\r\n            ],\r\n            \"language\": \"English\",\r\n            \"duration\": 180,\r\n            \"releaseDate\": \"2023-07-21T00:00:00.000Z\",\r\n            \"ratings\": 4.7\r\n        }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{DOMAIN}}/api/movies",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"path": [
+										"api",
+										"movies"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "98"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Apr 2025 13:53:48 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745071694"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "414"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"19e-MUqsIiuUK8kmPjOr4CuzRFz/39E\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"movie\": {\n        \"title\": \"Oppenheimer TEST 1\",\n        \"description\": \"The story of J. Robert Oppenheimer and the creation of the atomic bomb during World War II.\",\n        \"genre\": [\n            \"Biography\",\n            \"Drama\",\n            \"History\"\n        ],\n        \"language\": \"English\",\n        \"duration\": 180,\n        \"releaseDate\": \"2023-07-21T00:00:00.000Z\",\n        \"isActive\": true,\n        \"ratings\": 4.7,\n        \"_id\": \"6803aaecf925fbae4eeaa879\",\n        \"createdAt\": \"2025-04-19T13:53:48.109Z\",\n        \"updatedAt\": \"2025-04-19T13:53:48.109Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Movie Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{DOMAIN}}/api/movies/67f822fab480bd8ce2abfa8e",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"movies",
+								"67f822fab480bd8ce2abfa8e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Movie Details",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{DOMAIN}}/api/movies/67f822fab480bd8ce2abfa8e",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"path": [
+										"api",
+										"movies",
+										"67f822fab480bd8ce2abfa8e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "97"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Apr 2025 13:54:06 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745071694"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "406"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"196-pe/+3bom36sHzl2S9BkjjRS1wFc\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"movie\": {\n        \"_id\": \"67f822fab480bd8ce2abfa8e\",\n        \"title\": \"Oppenheimer\",\n        \"description\": \"The story of J. Robert Oppenheimer and the creation of the atomic bomb during World War II.\",\n        \"genre\": [\n            \"Biography\",\n            \"Drama\",\n            \"History\"\n        ],\n        \"language\": \"English\",\n        \"duration\": 180,\n        \"releaseDate\": \"2023-07-21T00:00:00.000Z\",\n        \"isActive\": false,\n        \"ratings\": 5,\n        \"createdAt\": \"2025-04-10T19:58:50.331Z\",\n        \"updatedAt\": \"2025-04-10T20:04:19.282Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Movie - ADMIN",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Oppenheimer\",\r\n    \"description\": \"The story of J. Robert Oppenheimer and the creation of the atomic bomb during World War II.\",\r\n    \"genre\": [\r\n        \"Biography\",\r\n        \"Drama\",\r\n        \"History\"\r\n    ],\r\n    \"language\": \"English\",\r\n    \"duration\": 180,\r\n    \"releaseDate\": \"2023-07-21T00:00:00.000Z\",\r\n    \"ratings\": 5.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DOMAIN}}/api/movies/67f822fab480bd8ce2abfa8e",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"movies",
+								"67f822fab480bd8ce2abfa8e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Movie - ADMIN",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Oppenheimer\",\r\n    \"description\": \"The story of J. Robert Oppenheimer and the creation of the atomic bomb during World War II.\",\r\n    \"genre\": [\r\n        \"Biography\",\r\n        \"Drama\",\r\n        \"History\"\r\n    ],\r\n    \"language\": \"English\",\r\n    \"duration\": 180,\r\n    \"releaseDate\": \"2023-07-21T00:00:00.000Z\",\r\n    \"ratings\": 5.0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{DOMAIN}}/api/movies/67f822fab480bd8ce2abfa8e",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"path": [
+										"api",
+										"movies",
+										"67f822fab480bd8ce2abfa8e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "96"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Apr 2025 13:54:50 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745071694"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "406"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"196-IWICAcfgBj57kRDmZ9YRtG8b1qI\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"movie\": {\n        \"_id\": \"67f822fab480bd8ce2abfa8e\",\n        \"title\": \"Oppenheimer\",\n        \"description\": \"The story of J. Robert Oppenheimer and the creation of the atomic bomb during World War II.\",\n        \"genre\": [\n            \"Biography\",\n            \"Drama\",\n            \"History\"\n        ],\n        \"language\": \"English\",\n        \"duration\": 180,\n        \"releaseDate\": \"2023-07-21T00:00:00.000Z\",\n        \"isActive\": false,\n        \"ratings\": 5,\n        \"createdAt\": \"2025-04-10T19:58:50.331Z\",\n        \"updatedAt\": \"2025-04-19T13:54:50.366Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Movie - ADMIN",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{DOMAIN}}/api/movies/67f822fab480bd8ce2abfa8e",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"movies",
+								"67f822fab480bd8ce2abfa8e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Movie - ADMIN",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{DOMAIN}}/api/movies/67f822fab480bd8ce2abfa8e",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"path": [
+										"api",
+										"movies",
+										"67f822fab480bd8ce2abfa8e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "95"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Apr 2025 13:55:07 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745071694"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "16"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Movie Shows",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{DOMAIN}}/api/movies/67f822078c928ca0fa687781/shows",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"movies",
+								"67f822078c928ca0fa687781",
+								"shows"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Movie Shows",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{DOMAIN}}/api/movies/67f822078c928ca0fa687781/shows",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"path": [
+										"api",
+										"movies",
+										"67f822078c928ca0fa687781",
+										"shows"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "90"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Apr 2025 13:56:54 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745071694"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "725"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2d5-ZWW3bagvcldJdPuc6B5scqqieHA\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"shows\": [\n        {\n            \"_id\": \"6803ab8af925fbae4eeaa887\",\n            \"movie\": {\n                \"_id\": \"67f822078c928ca0fa687781\",\n                \"title\": \"Dune: Part Two\",\n                \"language\": \"English\",\n                \"duration\": 166\n            },\n            \"screen\": \"TEST Screen 1\",\n            \"startTime\": \"2025-04-23T12:00:00.000Z\",\n            \"price\": 70000,\n            \"seatsRemaining\": 100\n        },\n        {\n            \"_id\": \"6803ab95f925fbae4eeaa88a\",\n            \"movie\": {\n                \"_id\": \"67f822078c928ca0fa687781\",\n                \"title\": \"Dune: Part Two\",\n                \"language\": \"English\",\n                \"duration\": 166\n            },\n            \"screen\": \"TEST Screen 1\",\n            \"startTime\": \"2025-04-23T18:00:00.000Z\",\n            \"price\": 70000,\n            \"seatsRemaining\": 100\n        },\n        {\n            \"_id\": \"6803ab80f925fbae4eeaa884\",\n            \"movie\": {\n                \"_id\": \"67f822078c928ca0fa687781\",\n                \"title\": \"Dune: Part Two\",\n                \"language\": \"English\",\n                \"duration\": 166\n            },\n            \"screen\": \"TEST Screen 1\",\n            \"startTime\": \"2025-04-23T22:00:00.000Z\",\n            \"price\": 70000,\n            \"seatsRemaining\": 100\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Show",
+			"item": [
+				{
+					"name": "Get All Shows",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{DOMAIN}}/api/shows",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"shows"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Shows",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{DOMAIN}}/api/shows",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"path": [
+										"api",
+										"shows"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Apr 2025 14:12:59 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745072880"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4972"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"136c-L4d/J28grZsS9lyLt3ub+S5Yo5I\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"shows\": [\n        {\n            \"_id\": \"67f8c7da1b8ba94fe1995abb\",\n            \"movie\": {\n                \"_id\": \"67f822078c928ca0fa68777c\",\n                \"title\": \"Oppenheimer\",\n                \"language\": \"English\",\n                \"duration\": 180\n            },\n            \"screen\": \"Screen 3\",\n            \"startTime\": \"2025-04-13T09:00:00.000Z\",\n            \"price\": 50000,\n            \"currency\": \"INR\",\n            \"totalSeats\": 120,\n            \"seatsRemaining\": 120,\n            \"createdBy\": \"67f7a1aa46be20699f9b938b\",\n            \"isCancelled\": false,\n            \"createdAt\": \"2025-04-11T07:42:18.868Z\",\n            \"updatedAt\": \"2025-04-11T07:42:18.868Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"67f8c8181b8ba94fe1995abe\",\n            \"movie\": {\n                \"_id\": \"67f822078c928ca0fa68777c\",\n                \"title\": \"Oppenheimer\",\n                \"language\": \"English\",\n                \"duration\": 180\n            },\n            \"screen\": \"Screen 3\",\n            \"startTime\": \"2025-04-13T12:00:00.000Z\",\n            \"price\": 50000,\n            \"currency\": \"INR\",\n            \"totalSeats\": 120,\n            \"seatsRemaining\": 120,\n            \"createdBy\": \"67f7a1aa46be20699f9b938b\",\n            \"isCancelled\": false,\n            \"createdAt\": \"2025-04-11T07:43:20.348Z\",\n            \"updatedAt\": \"2025-04-11T07:43:20.348Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"67f8c8291b8ba94fe1995ac1\",\n            \"movie\": {\n                \"_id\": \"67f822078c928ca0fa68777c\",\n                \"title\": \"Oppenheimer\",\n                \"language\": \"English\",\n                \"duration\": 180\n            },\n            \"screen\": \"Screen 3\",\n            \"startTime\": \"2025-04-13T18:00:00.000Z\",\n            \"price\": 60000,\n            \"currency\": \"INR\",\n            \"totalSeats\": 120,\n            \"seatsRemaining\": 120,\n            \"createdBy\": \"67f7a1aa46be20699f9b938b\",\n            \"isCancelled\": false,\n            \"createdAt\": \"2025-04-11T07:43:37.342Z\",\n            \"updatedAt\": \"2025-04-11T07:43:37.342Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"67f8c8311b8ba94fe1995ac4\",\n            \"movie\": {\n                \"_id\": \"67f822078c928ca0fa68777c\",\n                \"title\": \"Oppenheimer\",\n                \"language\": \"English\",\n                \"duration\": 180\n            },\n            \"screen\": \"Screen 3\",\n            \"startTime\": \"2025-04-13T22:00:00.000Z\",\n            \"price\": 60000,\n            \"currency\": \"INR\",\n            \"totalSeats\": 120,\n            \"seatsRemaining\": 120,\n            \"createdBy\": \"67f7a1aa46be20699f9b938b\",\n            \"isCancelled\": false,\n            \"createdAt\": \"2025-04-11T07:43:45.941Z\",\n            \"updatedAt\": \"2025-04-11T07:43:45.941Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"67f8c8e31b8ba94fe1995ac9\",\n            \"movie\": {\n                \"_id\": \"67f822078c928ca0fa687781\",\n                \"title\": \"Dune: Part Two\",\n                \"language\": \"English\",\n                \"duration\": 166\n            },\n            \"screen\": \"Screen 1 4D\",\n            \"startTime\": \"2025-04-13T09:00:00.000Z\",\n            \"price\": 60000,\n            \"currency\": \"INR\",\n            \"totalSeats\": 100,\n            \"seatsRemaining\": 100,\n            \"createdBy\": \"67f7a1aa46be20699f9b938b\",\n            \"isCancelled\": false,\n            \"createdAt\": \"2025-04-11T07:46:43.701Z\",\n            \"updatedAt\": \"2025-04-11T07:46:43.701Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"67f8c8f01b8ba94fe1995acc\",\n            \"movie\": {\n                \"_id\": \"67f822078c928ca0fa687781\",\n                \"title\": \"Dune: Part Two\",\n                \"language\": \"English\",\n                \"duration\": 166\n            },\n            \"screen\": \"Screen 1 4D\",\n            \"startTime\": \"2025-04-13T12:00:00.000Z\",\n            \"price\": 60000,\n            \"currency\": \"INR\",\n            \"totalSeats\": 100,\n            \"seatsRemaining\": 100,\n            \"createdBy\": \"67f7a1aa46be20699f9b938b\",\n            \"isCancelled\": false,\n            \"createdAt\": \"2025-04-11T07:46:56.984Z\",\n            \"updatedAt\": \"2025-04-11T07:46:56.984Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"67f8c9041b8ba94fe1995acf\",\n            \"movie\": {\n                \"_id\": \"67f822078c928ca0fa687781\",\n                \"title\": \"Dune: Part Two\",\n                \"language\": \"English\",\n                \"duration\": 166\n            },\n            \"screen\": \"Screen 1 4D\",\n            \"startTime\": \"2025-04-13T18:00:00.000Z\",\n            \"price\": 70000,\n            \"currency\": \"INR\",\n            \"totalSeats\": 100,\n            \"seatsRemaining\": 100,\n            \"createdBy\": \"67f7a1aa46be20699f9b938b\",\n            \"isCancelled\": false,\n            \"createdAt\": \"2025-04-11T07:47:16.699Z\",\n            \"updatedAt\": \"2025-04-11T07:47:16.699Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"67f8c93b1b8ba94fe1995ad7\",\n            \"movie\": {\n                \"_id\": \"67f822078c928ca0fa687781\",\n                \"title\": \"Dune: Part Two\",\n                \"language\": \"English\",\n                \"duration\": 166\n            },\n            \"screen\": \"Screen 1 4D\",\n            \"startTime\": \"2025-04-13T22:00:00.000Z\",\n            \"price\": 70000,\n            \"currency\": \"INR\",\n            \"totalSeats\": 100,\n            \"seatsRemaining\": 100,\n            \"createdBy\": \"67f7a1aa46be20699f9b938b\",\n            \"isCancelled\": false,\n            \"createdAt\": \"2025-04-11T07:48:11.621Z\",\n            \"updatedAt\": \"2025-04-11T07:48:11.621Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"67f8f856e76bfbc22967ec0d\",\n            \"movie\": {\n                \"_id\": \"67f822078c928ca0fa687781\",\n                \"title\": \"Dune: Part Two\",\n                \"language\": \"English\",\n                \"duration\": 166\n            },\n            \"screen\": \"TEST Screen\",\n            \"startTime\": \"2025-04-13T22:00:00.000Z\",\n            \"price\": 70000,\n            \"currency\": \"INR\",\n            \"totalSeats\": 100,\n            \"seatsRemaining\": 93,\n            \"createdBy\": \"67f7a1aa46be20699f9b938b\",\n            \"isCancelled\": false,\n            \"createdAt\": \"2025-04-11T11:09:10.199Z\",\n            \"updatedAt\": \"2025-04-11T11:16:19.823Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6803ab80f925fbae4eeaa884\",\n            \"movie\": {\n                \"_id\": \"67f822078c928ca0fa687781\",\n                \"title\": \"Dune: Part Two\",\n                \"language\": \"English\",\n                \"duration\": 166\n            },\n            \"screen\": \"TEST Screen 1\",\n            \"startTime\": \"2025-04-23T22:00:00.000Z\",\n            \"price\": 70000,\n            \"currency\": \"INR\",\n            \"totalSeats\": 100,\n            \"seatsRemaining\": 100,\n            \"createdBy\": \"67f7a1aa46be20699f9b938b\",\n            \"isCancelled\": false,\n            \"createdAt\": \"2025-04-19T13:56:16.237Z\",\n            \"updatedAt\": \"2025-04-19T13:56:16.237Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6803ab8af925fbae4eeaa887\",\n            \"movie\": {\n                \"_id\": \"67f822078c928ca0fa687781\",\n                \"title\": \"Dune: Part Two\",\n                \"language\": \"English\",\n                \"duration\": 166\n            },\n            \"screen\": \"TEST Screen 1\",\n            \"startTime\": \"2025-04-23T12:00:00.000Z\",\n            \"price\": 70000,\n            \"currency\": \"INR\",\n            \"totalSeats\": 100,\n            \"seatsRemaining\": 100,\n            \"createdBy\": \"67f7a1aa46be20699f9b938b\",\n            \"isCancelled\": false,\n            \"createdAt\": \"2025-04-19T13:56:26.007Z\",\n            \"updatedAt\": \"2025-04-19T13:56:26.007Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6803ab95f925fbae4eeaa88a\",\n            \"movie\": {\n                \"_id\": \"67f822078c928ca0fa687781\",\n                \"title\": \"Dune: Part Two\",\n                \"language\": \"English\",\n                \"duration\": 166\n            },\n            \"screen\": \"TEST Screen 1\",\n            \"startTime\": \"2025-04-23T18:00:00.000Z\",\n            \"price\": 70000,\n            \"currency\": \"INR\",\n            \"totalSeats\": 100,\n            \"seatsRemaining\": 100,\n            \"createdBy\": \"67f7a1aa46be20699f9b938b\",\n            \"isCancelled\": false,\n            \"createdAt\": \"2025-04-19T13:56:37.922Z\",\n            \"updatedAt\": \"2025-04-19T13:56:37.922Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Show - ADMIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"movie\": \"67f822078c928ca0fa687781\",\r\n  \"screen\": \"TEST Screen 1\",\r\n  \"startTime\": \"2025-04-23T09:00:00.000Z\",\r\n  \"price\": 70000,\r\n  \"totalSeats\": 100,\r\n  \"seatsRemaining\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DOMAIN}}/api/shows",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"shows"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Show - ADMIN",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"movie\": \"67f822078c928ca0fa687781\",\r\n  \"screen\": \"TEST Screen 1\",\r\n  \"startTime\": \"2025-04-23T09:00:00.000Z\",\r\n  \"price\": 70000,\r\n  \"totalSeats\": 100,\r\n  \"seatsRemaining\": 100\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{DOMAIN}}/api/shows",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"path": [
+										"api",
+										"shows"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "98"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Apr 2025 14:13:33 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745072880"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "356"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"164-wS/77ujYCrujXURg2whvxhyIflw\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"show\": {\n        \"movie\": \"67f822078c928ca0fa687781\",\n        \"screen\": \"TEST Screen 1\",\n        \"startTime\": \"2025-04-23T09:00:00.000Z\",\n        \"price\": 70000,\n        \"currency\": \"INR\",\n        \"totalSeats\": 100,\n        \"seatsRemaining\": 100,\n        \"createdBy\": \"67f7a1aa46be20699f9b938b\",\n        \"isCancelled\": false,\n        \"_id\": \"6803af8df925fbae4eeaa891\",\n        \"createdAt\": \"2025-04-19T14:13:33.545Z\",\n        \"updatedAt\": \"2025-04-19T14:13:33.545Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Show Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{DOMAIN}}/api/shows/6803af8df925fbae4eeaa891",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"shows",
+								"6803af8df925fbae4eeaa891"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Show Details",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{DOMAIN}}/api/shows/6803af8df925fbae4eeaa891",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"path": [
+										"api",
+										"shows",
+										"6803af8df925fbae4eeaa891"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "96"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Apr 2025 14:14:03 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745072880"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "653"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"28d-cNvleXJXWn1WMTEssR6cjkA9WOY\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"show\": {\n        \"_id\": \"6803af8df925fbae4eeaa891\",\n        \"movie\": {\n            \"_id\": \"67f822078c928ca0fa687781\",\n            \"title\": \"Dune: Part Two\",\n            \"description\": \"Paul Atreides unites with the Fremen and sets out to exact revenge against the conspirators who destroyed his family.\",\n            \"genre\": [\n                \"Sci-Fi\",\n                \"Adventure\",\n                \"Drama\"\n            ],\n            \"language\": \"English\",\n            \"duration\": 166,\n            \"releaseDate\": \"2024-03-01T00:00:00.000Z\",\n            \"ratings\": 4.6\n        },\n        \"screen\": \"TEST Screen 1\",\n        \"startTime\": \"2025-04-23T09:00:00.000Z\",\n        \"price\": 70000,\n        \"currency\": \"INR\",\n        \"totalSeats\": 100,\n        \"seatsRemaining\": 100,\n        \"createdBy\": \"67f7a1aa46be20699f9b938b\",\n        \"isCancelled\": false,\n        \"createdAt\": \"2025-04-19T14:13:33.545Z\",\n        \"updatedAt\": \"2025-04-19T14:13:33.545Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Show Details - ADMIN",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"screen\": \"Screen 1 4D\",\r\n  \"startTime\": \"2025-04-13T22:00:00.000Z\",\r\n  \"price\": 75000,\r\n  \"totalSeats\": 100,\r\n  \"seatsRemaining\": 80\r\n  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DOMAIN}}/api/shows/67f8c90d1b8ba94fe1995ad2",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"shows",
+								"67f8c90d1b8ba94fe1995ad2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Show Details - ADMIN",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"screen\": \"Screen 1 4D\",\r\n  \"startTime\": \"2025-04-13T22:00:00.000Z\",\r\n  \"price\": 75000,\r\n  \"totalSeats\": 100,\r\n  \"seatsRemaining\": 80\r\n  \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{DOMAIN}}/api/shows/67f8c90d1b8ba94fe1995ad2",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"path": [
+										"api",
+										"shows",
+										"67f8c90d1b8ba94fe1995ad2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "95"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Apr 2025 14:14:35 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745072880"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "352"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"160-FaKU7nDA6zPttGT0gDcK5/ykfvY\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"show\": {\n        \"_id\": \"67f8c90d1b8ba94fe1995ad2\",\n        \"movie\": \"67f822078c928ca0fa687781\",\n        \"screen\": \"Screen 1 4D\",\n        \"startTime\": \"2025-04-13T22:00:00.000Z\",\n        \"price\": 75000,\n        \"currency\": \"INR\",\n        \"totalSeats\": 100,\n        \"seatsRemaining\": 80,\n        \"createdBy\": \"67f7a1aa46be20699f9b938b\",\n        \"isCancelled\": true,\n        \"createdAt\": \"2025-04-11T07:47:25.374Z\",\n        \"updatedAt\": \"2025-04-19T14:14:35.202Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Show - ADMIN",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{DOMAIN}}/api/shows/6803af8df925fbae4eeaa891",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"shows",
+								"6803af8df925fbae4eeaa891"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Show - ADMIN",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{DOMAIN}}/api/shows/6803af8df925fbae4eeaa891",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"path": [
+										"api",
+										"shows",
+										"6803af8df925fbae4eeaa891"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "94"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Apr 2025 14:14:52 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745072880"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "16"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Bookings",
+			"item": [
+				{
+					"name": "Create Booking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"showId\" :\"6803ab8af925fbae4eeaa887\",\r\n    \"numberOfSeats\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DOMAIN}}/api/bookings",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"bookings"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Booking",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"showId\" :\"6803ab8af925fbae4eeaa887\",\r\n    \"numberOfSeats\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{DOMAIN}}/api/bookings",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"path": [
+										"api",
+										"bookings"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "89"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Apr 2025 14:17:58 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745072880"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "349"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15d-g3ncsWM5NagtJJeHFvzoYxHvz2U\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Booking Created\",\n    \"booking\": {\n        \"user\": \"67f7a1aa46be20699f9b938b\",\n        \"show\": \"6803ab8af925fbae4eeaa887\",\n        \"numberOfSeats\": 2,\n        \"basePrice\": 140000,\n        \"taxAmount\": 25200,\n        \"totalPrice\": 165200,\n        \"paymentStatus\": \"pending\",\n        \"isCancelled\": false,\n        \"_id\": \"6803b096f925fbae4eeaa8a7\",\n        \"createdAt\": \"2025-04-19T14:17:59.002Z\",\n        \"updatedAt\": \"2025-04-19T14:17:59.002Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Bookings by User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{DOMAIN}}/api/bookings/me",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"bookings",
+								"me"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Bookings by User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{DOMAIN}}/api/bookings/me",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"path": [
+										"api",
+										"bookings",
+										"me"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "88"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Apr 2025 14:18:15 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745072880"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1791"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"6ff-0HyI1tr4wcGuXeaNDiYoIF2NuyI\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"bookings\": [\n        {\n            \"_id\": \"6803b096f925fbae4eeaa8a7\",\n            \"user\": \"67f7a1aa46be20699f9b938b\",\n            \"show\": {\n                \"_id\": \"6803ab8af925fbae4eeaa887\",\n                \"movie\": {\n                    \"_id\": \"67f822078c928ca0fa687781\",\n                    \"title\": \"Dune: Part Two\"\n                },\n                \"screen\": \"TEST Screen 1\",\n                \"startTime\": \"2025-04-23T12:00:00.000Z\"\n            },\n            \"numberOfSeats\": 2,\n            \"basePrice\": 140000,\n            \"taxAmount\": 25200,\n            \"totalPrice\": 165200,\n            \"paymentStatus\": \"pending\",\n            \"isCancelled\": false,\n            \"createdAt\": \"2025-04-19T14:17:59.002Z\",\n            \"updatedAt\": \"2025-04-19T14:17:59.002Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"67f8f905e76bfbc22967ec23\",\n            \"user\": \"67f7a1aa46be20699f9b938b\",\n            \"show\": {\n                \"_id\": \"67f8f856e76bfbc22967ec0d\",\n                \"movie\": {\n                    \"_id\": \"67f822078c928ca0fa687781\",\n                    \"title\": \"Dune: Part Two\"\n                },\n                \"screen\": \"TEST Screen\",\n                \"startTime\": \"2025-04-13T22:00:00.000Z\"\n            },\n            \"numberOfSeats\": 11,\n            \"basePrice\": 7700,\n            \"taxAmount\": 1386,\n            \"totalPrice\": 9086,\n            \"paymentStatus\": \"pending\",\n            \"isCancelled\": true,\n            \"createdAt\": \"2025-04-11T11:12:05.294Z\",\n            \"updatedAt\": \"2025-04-11T11:16:19.825Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"67f8f8f2e76bfbc22967ec1c\",\n            \"user\": \"67f7a1aa46be20699f9b938b\",\n            \"show\": {\n                \"_id\": \"67f8f856e76bfbc22967ec0d\",\n                \"movie\": {\n                    \"_id\": \"67f822078c928ca0fa687781\",\n                    \"title\": \"Dune: Part Two\"\n                },\n                \"screen\": \"TEST Screen\",\n                \"startTime\": \"2025-04-13T22:00:00.000Z\"\n            },\n            \"numberOfSeats\": 2,\n            \"basePrice\": 1400,\n            \"taxAmount\": 252,\n            \"totalPrice\": 1652,\n            \"paymentStatus\": \"pending\",\n            \"isCancelled\": false,\n            \"createdAt\": \"2025-04-11T11:11:46.919Z\",\n            \"updatedAt\": \"2025-04-11T11:11:46.919Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"67f8f89de76bfbc22967ec15\",\n            \"user\": \"67f7a1aa46be20699f9b938b\",\n            \"show\": {\n                \"_id\": \"67f8f856e76bfbc22967ec0d\",\n                \"movie\": {\n                    \"_id\": \"67f822078c928ca0fa687781\",\n                    \"title\": \"Dune: Part Two\"\n                },\n                \"screen\": \"TEST Screen\",\n                \"startTime\": \"2025-04-13T22:00:00.000Z\"\n            },\n            \"numberOfSeats\": 5,\n            \"basePrice\": 3500,\n            \"taxAmount\": 630,\n            \"totalPrice\": 4130,\n            \"paymentStatus\": \"pending\",\n            \"isCancelled\": false,\n            \"createdAt\": \"2025-04-11T11:10:21.234Z\",\n            \"updatedAt\": \"2025-04-11T11:10:21.234Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Cancel Booking",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{DOMAIN}}/api/bookings/6803b096f925fbae4eeaa8a7",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"bookings",
+								"6803b096f925fbae4eeaa8a7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Cancel Booking",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{DOMAIN}}/api/bookings/6803b096f925fbae4eeaa8a7",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"path": [
+										"api",
+										"bookings",
+										"6803b096f925fbae4eeaa8a7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "86"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Apr 2025 14:20:17 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745072880"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "44"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2c-9TPlTQq3wHNcwVF31TOYM8H4fxQ\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Booking cancelled successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Bookings - ADMIN",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{DOMAIN}}/api/bookings/admin",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"bookings",
+								"admin"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Bookings - ADMIN",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{DOMAIN}}/api/bookings/admin",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"path": [
+										"api",
+										"bookings",
+										"admin"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "85"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Apr 2025 14:20:26 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745072880"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1990"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7c6-Hr8MFYu1ncJR+ueDi6+z8Nno/yo\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"bookings\": [\n        {\n            \"_id\": \"6803b096f925fbae4eeaa8a7\",\n            \"user\": {\n                \"_id\": \"67f7a1aa46be20699f9b938b\",\n                \"name\": \"noel\",\n                \"email\": \"nkj2000@gmail.com\"\n            },\n            \"show\": {\n                \"_id\": \"6803ab8af925fbae4eeaa887\",\n                \"movie\": {\n                    \"_id\": \"67f822078c928ca0fa687781\",\n                    \"title\": \"Dune: Part Two\"\n                },\n                \"screen\": \"TEST Screen 1\",\n                \"startTime\": \"2025-04-23T12:00:00.000Z\"\n            },\n            \"numberOfSeats\": 2,\n            \"basePrice\": 140000,\n            \"taxAmount\": 25200,\n            \"totalPrice\": 165200,\n            \"paymentStatus\": \"pending\",\n            \"isCancelled\": true,\n            \"createdAt\": \"2025-04-19T14:17:59.002Z\",\n            \"updatedAt\": \"2025-04-19T14:20:17.150Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"67f8f905e76bfbc22967ec23\",\n            \"user\": {\n                \"_id\": \"67f7a1aa46be20699f9b938b\",\n                \"name\": \"noel\",\n                \"email\": \"nkj2000@gmail.com\"\n            },\n            \"show\": {\n                \"_id\": \"67f8f856e76bfbc22967ec0d\",\n                \"movie\": {\n                    \"_id\": \"67f822078c928ca0fa687781\",\n                    \"title\": \"Dune: Part Two\"\n                },\n                \"screen\": \"TEST Screen\",\n                \"startTime\": \"2025-04-13T22:00:00.000Z\"\n            },\n            \"numberOfSeats\": 11,\n            \"basePrice\": 7700,\n            \"taxAmount\": 1386,\n            \"totalPrice\": 9086,\n            \"paymentStatus\": \"pending\",\n            \"isCancelled\": true,\n            \"createdAt\": \"2025-04-11T11:12:05.294Z\",\n            \"updatedAt\": \"2025-04-11T11:16:19.825Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"67f8f8f2e76bfbc22967ec1c\",\n            \"user\": {\n                \"_id\": \"67f7a1aa46be20699f9b938b\",\n                \"name\": \"noel\",\n                \"email\": \"nkj2000@gmail.com\"\n            },\n            \"show\": {\n                \"_id\": \"67f8f856e76bfbc22967ec0d\",\n                \"movie\": {\n                    \"_id\": \"67f822078c928ca0fa687781\",\n                    \"title\": \"Dune: Part Two\"\n                },\n                \"screen\": \"TEST Screen\",\n                \"startTime\": \"2025-04-13T22:00:00.000Z\"\n            },\n            \"numberOfSeats\": 2,\n            \"basePrice\": 1400,\n            \"taxAmount\": 252,\n            \"totalPrice\": 1652,\n            \"paymentStatus\": \"pending\",\n            \"isCancelled\": false,\n            \"createdAt\": \"2025-04-11T11:11:46.919Z\",\n            \"updatedAt\": \"2025-04-11T11:11:46.919Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"67f8f89de76bfbc22967ec15\",\n            \"user\": {\n                \"_id\": \"67f7a1aa46be20699f9b938b\",\n                \"name\": \"noel\",\n                \"email\": \"nkj2000@gmail.com\"\n            },\n            \"show\": {\n                \"_id\": \"67f8f856e76bfbc22967ec0d\",\n                \"movie\": {\n                    \"_id\": \"67f822078c928ca0fa687781\",\n                    \"title\": \"Dune: Part Two\"\n                },\n                \"screen\": \"TEST Screen\",\n                \"startTime\": \"2025-04-13T22:00:00.000Z\"\n            },\n            \"numberOfSeats\": 5,\n            \"basePrice\": 3500,\n            \"taxAmount\": 630,\n            \"totalPrice\": 4130,\n            \"paymentStatus\": \"pending\",\n            \"isCancelled\": false,\n            \"createdAt\": \"2025-04-11T11:10:21.234Z\",\n            \"updatedAt\": \"2025-04-11T11:10:21.234Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Bookings by ID - ADMIN",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{DOMAIN}}/api/bookings/admin/6803b096f925fbae4eeaa8a7",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"bookings",
+								"admin",
+								"6803b096f925fbae4eeaa8a7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Bookings by ID - ADMIN",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{DOMAIN}}/api/bookings/admin/6803b096f925fbae4eeaa8a7",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"path": [
+										"api",
+										"bookings",
+										"admin",
+										"6803b096f925fbae4eeaa8a7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "84"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Apr 2025 14:20:39 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745072880"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "510"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1fe-cVtLrnJNsr+hJHmIY0uyaqhNI0Y\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"booking\": {\n        \"_id\": \"6803b096f925fbae4eeaa8a7\",\n        \"user\": {\n            \"_id\": \"67f7a1aa46be20699f9b938b\",\n            \"name\": \"noel\",\n            \"email\": \"nkj2000@gmail.com\"\n        },\n        \"show\": {\n            \"_id\": \"6803ab8af925fbae4eeaa887\",\n            \"movie\": {\n                \"_id\": \"67f822078c928ca0fa687781\",\n                \"title\": \"Dune: Part Two\"\n            },\n            \"screen\": \"TEST Screen 1\",\n            \"startTime\": \"2025-04-23T12:00:00.000Z\"\n        },\n        \"numberOfSeats\": 2,\n        \"basePrice\": 140000,\n        \"taxAmount\": 25200,\n        \"totalPrice\": 165200,\n        \"paymentStatus\": \"pending\",\n        \"isCancelled\": true,\n        \"createdAt\": \"2025-04-19T14:17:59.002Z\",\n        \"updatedAt\": \"2025-04-19T14:20:17.150Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Payments",
+			"item": [
+				{
+					"name": "Create Razorpay Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookingId\": \"67f8f8f2e76bfbc22967ec1c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DOMAIN}}/api/payments/order",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"payments",
+								"order"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Razorpay Order",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"bookingId\": \"67f8f8f2e76bfbc22967ec1c\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{DOMAIN}}/api/payments/order",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"path": [
+										"api",
+										"payments",
+										"order"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "83"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Apr 2025 14:22:02 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745072880"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "402"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"192-U84+AiBWlzJNwrcdSok+rIXl1kg\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"order\": {\n        \"amount\": 1652,\n        \"amount_due\": 1652,\n        \"amount_paid\": 0,\n        \"attempts\": 0,\n        \"created_at\": 1745072524,\n        \"currency\": \"INR\",\n        \"entity\": \"order\",\n        \"id\": \"order_QKwnc3OW6YhZqF\",\n        \"notes\": {\n            \"bookingId\": \"67f8f8f2e76bfbc22967ec1c\",\n            \"userId\": \"67f7a1aa46be20699f9b938b\"\n        },\n        \"offer_id\": null,\n        \"receipt\": \"receipt_67f8f8f2e76bfbc22967ec1c\",\n        \"status\": \"created\"\n    },\n    \"success\": true,\n    \"orderId\": \"order_QKwnc3OW6YhZqF\",\n    \"amount\": 1652,\n    \"currency\": \"INR\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Verify Razorpay Payment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"razorpay_order_id\":\"order_QHnqREmJdGnwtF\",\r\n    \"razorpay_payment_id\": \"\",\r\n    \"razorpay_signature\": \"\",\r\n    \"bookingId\":\"67f8f8f2e76bfbc22967ec1c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DOMAIN}}/api/payments/verify",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"payments",
+								"verify"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Verify Razorpay Payment",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"razorpay_order_id\":\"order_QHnqREmJdGnwtF\",\r\n    \"razorpay_payment_id\": \"\",\r\n    \"razorpay_signature\": \"\",\r\n    \"bookingId\":\"67f8f8f2e76bfbc22967ec1c\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{DOMAIN}}/api/payments/verify",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"path": [
+										"api",
+										"payments",
+										"verify"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "82"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Apr 2025 14:22:25 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745072880"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "684"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2ac-zHcQulNDKasOdX2yjFsyg1qaaFI\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Missing payment verification details\",\n    \"error\": {\n        \"statusCode\": 400\n    },\n    \"stack\": \"Error: Missing payment verification details\\n    at file:///C:/Users/User/Desktop/CtrlSeat/backend/controllers/paymentControllers.js:57:17\\n    at file:///C:/Users/User/Desktop/CtrlSeat/backend/middlewares/catchAsyncErrors.js:3:21\\n    at Layer.handleRequest (C:\\\\Users\\\\User\\\\Desktop\\\\CtrlSeat\\\\node_modules\\\\router\\\\lib\\\\layer.js:152:17)\\n    at next (C:\\\\Users\\\\User\\\\Desktop\\\\CtrlSeat\\\\node_modules\\\\router\\\\lib\\\\route.js:157:13)\\n    at file:///C:/Users/User/Desktop/CtrlSeat/backend/middlewares/auth.js:23:3\\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
