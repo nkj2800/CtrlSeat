@@ -118,9 +118,18 @@ CtrlSeat/
 
 ## 📬 API Documentation
 
-Access the full API documentation and test the endpoints using the Postman collection:
+### Postman Collection
 
-[![Postman Collection](https://img.shields.io/badge/Postman-Collection-orange)](https://www.postman.com/yourusername/workspace/ctrlseat/collection/yourcollectionid)
+To help you test and explore the CtrlSeat API, we've prepared a comprehensive Postman collection.
+
+#### Option 1: Import from Repository
+You can find our Postman collection file in the `/docs/postman` directory of this repository.
+
+#### Option 2: Import via Link
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://documenter.getpostman.com/view/30023998/2sB2cd5dzx)
+
+
+Each request includes necessary headers, body parameters, and example responses to get you started quickly.
 
 ---
 
