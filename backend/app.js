@@ -39,6 +39,9 @@ const limiter = rateLimit({
   message: 'Too many requests from this IP, please try again later'
 })
 
+// Enable trust proxy to properly handle client IP addresses behind a reverse proxy (required for express-rate-limit on hosting platforms like Render)
+app.set('trust proxy', 1);
+
 app.use('/api', limiter)
 app.use(helmet()) // Security headers
 
@@ -50,6 +53,21 @@ app.use(hpp()) // Prevent HTTP Parameter Pollution
 app.use(cookieParser())
 
 connectDatabase()
+
+app.get('/', (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: 'Welcome to CtrlSeat API',
+    description: 'Book Your Movie ticket with CtrlSeat',
+    apiVersion: '1.0.0',
+    endpoints: {
+      movies: '/api/movies',
+      shows: '/api/shows',
+      users: '/api/users',
+      bookings: '/api/bookings'
+    }
+  });
+})
 
 // Mount API routes
 app.use('/api/auth', AuthRoutes)

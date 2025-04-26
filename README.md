@@ -4,6 +4,13 @@ CtrlSeat is a Node.js and Express-based backend API designed for seamless movie 
 
 ---
 
+## 🚀 Live Demo
+
+Experience CtrlSeat in action:   [https://ctrlseat.onrender.com](https://ctrlseat.onrender.com)
+
+
+---
+
 ## 🚀 Features
 
 - **User Authentication**: Secure registration and login using JWT.
@@ -108,8 +115,14 @@ CtrlSeat/
         RAZORPAY_KEY_ID=your_razorpay_key_id
         RAZORPAY_KEY_SECRET=your_razorpay_key_secret
      ```
+4. **Seed the Database (Optional)**:
+   - If you want to insert sample movies into the database, run the movie seeder:
+   ```bash
+   npm run seeder
+   ```
+   - This will populate the `movies` collection with sample data.
 
-4. **Start the Server**:
+5. **Start the Server**:
    ```bash
    npm start
    ```
