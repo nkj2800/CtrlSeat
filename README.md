@@ -22,20 +22,6 @@ Experience CtrlSeat in action:   [https://ctrlseat.onrender.com](https://ctrlsea
 
 ---
 
-## 📧 Email Templates
-
-### Password Reset Email
-![Password Reset Email](screenshots/forgot-password-email.png)
-
-*Email template sent to users when they request on forgot password.*
-
-### Booking Confirmation Receipt
-![Booking Confirmation Receipt](screenshots/booking-receipt-email.png)
-
-*Email receipt sent to users after successful movie ticket booking.*
-
----
-
 ## 🛠️ Tech Stack
 
 - **Backend**: Node.js, Express.js
@@ -150,6 +136,20 @@ Each request includes necessary headers, body parameters, and example responses 
 
 - **Email Testing**: All transactional emails are routed through Mailtrap for safe testing.
 - **Payment Testing**: Utilize Razorpay's test mode to simulate payment scenarios.
+
+---
+
+## 📧 Email Templates
+
+### Password Reset Email
+![Password Reset Email](screenshots/forgot-password-email.png)
+
+*Email template sent to users when they request on forgot password.*
+
+### Booking Confirmation Receipt
+![Booking Confirmation Receipt](screenshots/booking-receipt-email.png)
+
+*Email receipt sent to users after successful movie ticket booking.*
 
 ---
 
